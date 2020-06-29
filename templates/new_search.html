@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+   {% if submitbutton == "Submit" %}
+        <h1>Your title is {{ title }}</h1>
+        <h1>Your first date is {{ start_quiz }}</h1>
+        <h1>Your second date is {{ end_quiz }}</h1>
+        <h1>Your description is {{ description }}</h1>
+{% endif %}
+{% endblock content %}

@@ -1,0 +1,50 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Опрос</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+{#<h1>Придумайте опрос</h1>#}
+{#<form name="test" method="post">#}
+{#    <p>Имя опроса:#}
+{#        <input type="text" size="40">#}
+{#    </p>#}
+{#    <form>#}
+{#        <p>Укажите дату начала опроса:#}
+{#            <input type="month" name="month">#}
+{#        </p>#}
+{#    </form>#}
+{#    <form>#}
+{#        <p>Укажите дату окончания опроса:#}
+{#            <input type="month" name="month">#}
+{#        </p>#}
+{#    </form>#}
+{#    <p>Описание:#}
+{#        <textarea name="comment" cols="40" rows="3"></textarea>#}
+{#    </p>#}
+{#    <form action="{% url 'new_search' %}" method="post">#}
+{#        {% csrf_token %}#}
+{#        <input type="submit" name="search" placeholder="search" value="Отправить">#}
+{#    </form>#}
+{##}
+{# </form>#}
+<h1>Нажми на кнопку, чтобы создать опрос</h1>
+<form action="{% url 'new_search' %}" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="Submit" name="submit" value="Submit"/>
+</form>
+
+
+{% block content %}
+
+{% endblock content %}
+<body>
+
+</body>
+</html>
